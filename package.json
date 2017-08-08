@@ -1,0 +1,26 @@
+{
+  "name": "work_sync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aturan/work_sync.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aturan/work_sync/issues"
+  },
+  "homepage": "https://github.com/Aturan/work_sync#readme",
+  "dependencies": {
+    "@types/cheerio": "^0.22.2",
+    "@types/lodash": "^4.14.71",
+    "@types/node": "^8.0.17",
+    "@types/superagent": "^3.5.3",
+    "cheerio": "^1.0.0-rc.2",
+    "lodash": "^4.17.4",
+    "supertest": "^3.0.0"
+  }
+}
