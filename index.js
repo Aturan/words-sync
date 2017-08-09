@@ -37,12 +37,12 @@ class Capture {
   static async cleanYoudaoWord(word) {
     console.info('...正在清空有道单词本：', word);
     const params = Object.assign({}, RequestOptions.youdao, {method: 'delete', word});
-    console.dir(params);
-    await request.post('http://yiduserver.youdao.com/wb.s').type('form').send(params);
+    const res = await request.post('http://yiduserver.youdao.com/wb.s').type('form').send(params);
+    console.dir(res.body);
   }
   static async cleanYoudao() {
     console.info('正在清空有道单词本');
-    const data = _.chunk(Data.youdao, 20 + _.random(0, 10));
+    const data = _.chunk(Data.youdao, 5 + _.random(0, 10));
     const clean = async () => {
       if (data.length > 0) {
         const allRequest = data.shift().map(word => Capture.cleanYoudaoWord(word));
